@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#10152d" name="theme-color"/>
+  <title>
+   Nexora Institute of Technology | Ideas Into Impact
+  </title>
+  <style>
+   :root{
+  --night:#10152d;
+  --night2:#1b2447;
+  --cyan:#5ce7d0;
+  --amber:#ffbd59;
+  --paper:#f5f7fb;
+  --ink:#171d35;
+  --muted:#64708a;
+  --line:#dce2ee;
+  --white:#fff}
+*{
+  box-sizing:border-box}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:84px}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.6 Inter,system-ui,sans-serif}
+a{
+  color:inherit;
+  text-decoration:none}
+button,input,select,textarea{
+  font:inherit}
+.wrap{
+  width:min(1160px,calc(100% - 40px));
+  margin:auto}
+.top{
+  background:#0b1023;
+  color:#c8d2ec;
+  font-size:12px}
+.top .wrap{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  padding:8px 0}
+.top b{
+  color:var(--cyan)}
+.header{
+  background:var(--night);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #ffffff1c}
+.header .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:16px 0}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+  font-size:19px;
+  letter-spacing:-.03em}
+.mark{
+  width:42px;
+  height:42px;
+  background:linear-gradient(140deg,var(--cyan),#8bbaff);
+  color:var(--night);
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  font-size:21px}
+.brand small{
+  display:block;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#aeb9d7}
+.nav{
+  display:flex;
+  gap:21px;
+  font-size:13px;
+  color:#cbd4ec}
+.nav a:hover{
+  color:var(--cyan)}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  border:0;
+  border-radius:9px;
+  background:var(--cyan);
+  color:var(--night);
+  font-weight:900;
+  padding:12px 17px;
+  cursor:pointer}
+.btn:hover{
+  filter:brightness(.95);
+  transform:translateY(-1px)}
+.btn.ghost{
+  background:transparent;
+  color:white;
+  border:1px solid #ffffff40}
+.menu{
+  display:none;
+  background:transparent;
+  color:white;
+  border:1px solid #ffffff55;
+  padding:8px;
+  border-radius:8px}
+.hero{
+  background:var(--night);
+  color:white;
+  overflow:hidden;
+  position:relative}
+.hero:before{
+  content:"";
+  position:absolute;
+  right:-150px;
+  top:-220px;
+  width:650px;
+  height:650px;
+  border:1px solid #5ce7d022;
+  border-radius:50%;
+  box-shadow:0 0 0 70px #5ce7d008,0 0 0 140px #5ce7d006}
+.hero .wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+  padding:76px 0;
+  position:relative}
+.eyebrow{
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:900;
+  color:#7190bb}
+.hero .eyebrow{
+  color:var(--cyan)}
+h1{
+  font-size:clamp(43px,6vw,74px);
+  letter-spacing:-.07em;
+  line-height:1.0;
+  margin:16px 0 22px}
+h1 em{
+  font-style:normal;
+  color:var(--cyan)}
+.hero p{
+  color:#c2cce4;
+  font-size:18px;
+  max-width:540px}
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:28px 0}
+.hero-foot{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  padding-top:20px;
+  border-top:1px solid #ffffff24;
+  margin-top:32px;
+  color:#b3c0df;
+  font-size:12px}
+.hero-foot b{
+  color:white}
+.visual{
+  min-height:390px;
+  border:1px solid #ffffff28;
+  border-radius:24px;
+  background:linear-gradient(145deg,#1a2448,#0b1128);
+  padding:20px;
+  box-shadow:0 30px 80px #0004;
+  position:relative}
+.visual-top{
+  display:flex;
+  justify-content:space-between;
+  color:#a9b9dc;
+  font:11px ui-monospace,monospace}
+.network{
+  position:relative;
+  height:270px;
+  margin:15px 0}
+.network svg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0}
+.node{
+  position:absolute;
+  width:60px;
+  height:60px;
+  border-radius:17px;
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  background:#23355c;
+  border:1px solid #ffffff2b;
+  box-shadow:0 10px 25px #0003}
+.node.n1{
+  left:9%;
+  top:17%;
+  color:var(--cyan)}
+.node.n2{
+  right:12%;
+  top:8%;
+  color:var(--amber)}
+.node.n3{
+  left:42%;
+  top:42%;
+  background:var(--cyan);
+  color:var(--night);
+  width:72px;
+  height:72px;
+  font-weight:900}
+.node.n4{
+  left:12%;
+  bottom:7%;
+  color:#bcaeff}
+.node.n5{
+  right:9%;
+  bottom:9%;
+  color:#ff9ba5}
+.visual-bottom{
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid #ffffff20;
+  padding-top:14px;
+  color:#9eafd3;
+  font:11px ui-monospace,monospace}
+.visual-bottom b{
+  color:var(--cyan)}
+.metrics{
+  background:white;
+  border-bottom:1px solid var(--line)}
+.metrics .wrap{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:23px 0}
+.metric{
+  border-right:1px solid var(--line);
+  padding-right:15px}
+.metric:last-child{
+  border:0}
+.metric strong{
+  display:block;
+  font-size:21px;
+  color:var(--night)}
+.metric span{
+  font-size:12px;
+  color:var(--muted)}
+.section{
+  padding:76px 0}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:30px}
+.section h2{
+  font-size:clamp(30px,4vw,45px);
+  letter-spacing:-.055em;
+  line-height:1.1;
+  color:var(--night);
+  margin:8px 0}
+.section-head p{
+  max-width:490px;
+  color:var(--muted);
+  margin:0}
+.courses{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px}
+.course{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:17px;
+  padding:23px;
+  transition:.2s;
+  min-height:225px;
+  display:flex;
+  flex-direction:column}
+.course:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 40px #111c3a12}
+.course-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font:11px ui-monospace,monospace;
+  color:#8190ac}
+.course-icon{
+  font-size:25px;
+  color:#3a678b;
+  margin:17px 0}
+.course h3{
+  font-size:19px;
+  margin:0 0 8px;
+  color:var(--night)}
+.course p{
+  font-size:14px;
+  color:var(--muted);
+  margin:0 0 15px}
+.course a{
+  margin-top:auto;
+  font-size:13px;
+  font-weight:900;
+  color:#287f7a}
+.dark{
+  background:var(--night);
+  color:white}
+.dark h2{
+  color:white}
+.dark .section-head p{
+  color:#b6c4e0}
+.research-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px}
+.research-card{
+  border:1px solid #ffffff25;
+  border-radius:18px;
+  padding:28px;
+  background:linear-gradient(140deg,#ffffff0d,#ffffff02)}
+.research-card span{
+  color:var(--cyan);
+  font:11px ui-monospace,monospace}
+.research-card h3{
+  font-size:23px;
+  margin:15px 0 10px}
+.research-card p{
+  color:#c0cce5}
+.research-card a{
+  display:inline-block;
+  color:var(--cyan);
+  font-weight:900;
+  font-size:13px;
+  margin-top:10px}
+.experience{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:40px;
+  align-items:center}
+.experience-art{
+  background:linear-gradient(140deg,#d7f6ef,#e3eaff);
+  border-radius:22px;
+  min-height:330px;
+  padding:25px;
+  position:relative;
+  overflow:hidden}
+.experience-art:before{
+  content:"NEXORA";
+  position:absolute;
+  left:20px;
+  bottom:18px;
+  font-size:45px;
+  font-weight:900;
+  letter-spacing:-.08em;
+  color:#152044}
+.orbit{
+  width:210px;
+  height:210px;
+  border:1px solid #5a789b77;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:45%;
+  transform:translate(-50%,-50%)}
+.orbit:before,.orbit:after{
+  content:"";
+  position:absolute;
+  inset:25px;
+  border:1px solid #5a789b55;
+  border-radius:50%;
+  transform:rotate(50deg) scaleX(.55)}
+.orbit:after{
+  transform:rotate(-50deg) scaleX(.55)}
+.orbit-center{
+  position:absolute;
+  left:50%;
+  top:45%;
+  transform:translate(-50%,-50%);
+  width:70px;
+  height:70px;
+  background:var(--night);
+  color:var(--cyan);
+  border-radius:20px;
+  display:grid;
+  place-items:center;
+  font-size:28px}
+.feature-list{
+  display:grid;
+  gap:14px;
+  margin:22px 0}
+.feature{
+  display:flex;
+  gap:12px}
+.check{
+  width:25px;
+  height:25px;
+  background:#d7f9ee;
+  color:#12675c;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  flex-shrink:0}
+.feature strong{
+  display:block}
+.feature small{
+  color:var(--muted)}
+.apply{
+  background:#e7edf8}
+.apply-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:30px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:32px}
+.apply-card p{
+  color:var(--muted)}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px}
+.field label{
+  display:block;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:6px}
+.field input,.field select,.field textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #d4dced;
+  border-radius:9px;
+  background:#fbfcff}
+.field.full{
+  grid-column:1/-1}
+.message{
+  font-size:14px;
+  font-weight:800;
+  margin-top:12px}
+.footer{
+  background:#090e20;
+  color:#c0cbe2;
+  padding:42px 0 20px}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:30px}
+.footer h3{
+  color:white}
+.footer a{
+  display:block;
+  font-size:13px;
+  margin:7px 0}
+.footer a:hover{
+  color:var(--cyan)}
+.bottom{
+  border-top:1px solid #ffffff22;
+  margin-top:25px;
+  padding-top:18px;
+  color:#8795b6;
+  font-size:12px}
+@media(max-width:850px){
+  .hero .wrap{
+  grid-template-columns:1fr;
+  padding:55px 0}
+.nav{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
+  background:var(--night2);
+  padding:18px 22px}
+.nav.open{
+  display:grid;
+  gap:13px}
+.menu{
+  display:block}
+.header .btn{
+  display:none}
+.courses{
+  grid-template-columns:repeat(2,1fr)}
+.experience,.apply-card{
+  grid-template-columns:1fr}
+.section-head{
+  display:block}
+.section-head p{
+  margin-top:12px}
+.metrics .wrap{
+  grid-template-columns:repeat(2,1fr)}
+.metric:nth-child(2){
+  border:0}
+}
+@media(max-width:560px){
+  .wrap{
+  width:calc(100% - 28px)}
+.hero h1{
+  font-size:49px}
+.hero .wrap{
+  gap:28px}
+.visual{
+  min-height:330px;
+  padding:15px}
+.network{
+  height:220px}
+.node{
+  width:48px;
+  height:48px;
+  border-radius:13px}
+.node.n3{
+  width:60px;
+  height:60px}
+.courses,.research-grid,.form-grid,.footer-grid{
+  grid-template-columns:1fr}
+.field.full{
+  grid-column:auto}
+.section{
+  padding:54px 0}
+.metrics .wrap{
+  gap:14px}
+.metric{
+  padding-right:8px}
+.apply-card{
+  padding:20px}
+.experience-art{
+  min-height:260px}
+}
+/* Footer creator credit */
+.creator-credit {
+   margin-top: 1.25rem;
+   padding-top: 1rem;
+   border-top: 1px solid rgba(127,127,127,.28);
+   text-align: center;
+   font-weight: 700;
+   letter-spacing: .08em;
+   font-size: .9rem;
+   }
+  </style>
+ </head>
+ <body>
+  <div class="top">
+   <div class="wrap">
+    <span>
+     ENGINEERING &middot; COMPUTING &middot; DISCOVERY
+    </span>
+    <span>
+     <b>
+      BUILD WITH INTENT.
+     </b>
+     &nbsp; THINK BEYOND THE OBVIOUS.
+    </span>
+   </div>
+  </div>
+  <header class="header">
+   <div class="wrap">
+    <a class="brand" href="#home">
+     <span class="mark">
+      N⌁
+     </span>
+     <span>
+      NEXORA
+      <small>
+       Institute of Technology
+      </small>
+     </span>
+    </a>
+    <nav class="nav" id="nav">
+     <a href="#courses">
+      Programs
+     </a>
+     <a href="#research">
+      Research
+     </a>
+     <a href="#experience">
+      Campus life
+     </a>
+     <a href="#admissions">
+      Admissions
+     </a>
+    </nav>
+    <button aria-expanded="false" class="menu" id="menuBtn">
+     ☰
+    </button>
+    <a class="btn" href="#admissions">
+     Explore admissions &nearrow;
+    </a>
+   </div>
+  </header>
+  <main id="home">
+   <section class="hero">
+    <div class="wrap">
+     <div>
+      <span class="eyebrow">
+       A new kind of technology institute
+      </span>
+      <h1>
+       Ideas are only
+       <br/>
+       the
+       <em>
+        beginning.
+       </em>
+      </h1>
+      <p>
+       At Nexora, technology is a way to ask better questions, solve meaningful problems and create systems that make a difference.
+      </p>
+      <div class="actions">
+       <a class="btn" href="#courses">
+        Explore programs &searrow;
+       </a>
+       <a class="btn ghost" href="#research">
+        Inside Nexora
+       </a>
+      </div>
+      <div class="hero-foot">
+       <span>
+        <b>
+         01
+        </b>
+        / Learn the fundamentals
+       </span>
+       <span>
+        <b>
+         02
+        </b>
+        / Build through practice
+       </span>
+       <span>
+        <b>
+         03
+        </b>
+        / Think about impact
+       </span>
+      </div>
+     </div>
+     <div class="visual">
+      <div class="visual-top">
+       <span>
+        NEXORA / CONNECTED IDEAS
+       </span>
+       <span>
+        SYS_01
+       </span>
+      </div>
+      <div class="network">
+       <svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 400 270">
+        <g fill="none" stroke="#5ce7d055" stroke-width="1.5">
+         <path d="M70 75 L205 140 L330 65 M205 140 L70 225 M205 140 L330 220 M70 75 L70 225 M330 65 L330 220">
+         </path>
+        </g>
+        <g fill="#5ce7d0">
+         <circle cx="70" cy="75" r="3">
+         </circle>
+         <circle cx="205" cy="140" r="4">
+         </circle>
+         <circle cx="330" cy="65" r="3">
+         </circle>
+         <circle cx="70" cy="225" r="3">
+         </circle>
+         <circle cx="330" cy="220" r="3">
+         </circle>
+        </g>
+       </svg>
+       <div class="node n1">
+        ⌘
+       </div>
+       <div class="node n2">
+        ✳
+       </div>
+       <div class="node n3">
+        N
+       </div>
+       <div class="node n4">
+        ◈
+       </div>
+       <div class="node n5">
+        ⛨
+       </div>
+      </div>
+      <div class="visual-bottom">
+       <span>
+        LEARNING NETWORK
+       </span>
+       <b>
+        ● ALL SYSTEMS CURIOUS
+       </b>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="metrics">
+    <div class="wrap">
+     <div class="metric">
+      <strong>
+       Build-first
+      </strong>
+      <span>
+       Learning through making
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       Cross-disciplinary
+      </strong>
+      <span>
+       Ideas across boundaries
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       Human-centred
+      </strong>
+      <span>
+       Technology with context
+      </span>
+     </div>
+     <div class="metric">
+      <strong>
+       Future-aware
+      </strong>
+      <span>
+       Skills that keep evolving
+      </span>
+     </div>
+    </div>
+   </div>
+   <section class="section" id="courses">
+    <div class="wrap">
+     <div class="section-head">
+      <div>
+       <span class="eyebrow">
+        01 / Academic pathways
+       </span>
+       <h2>
+        Build your own edge.
+       </h2>
+      </div>
+      <p>
+       Illustrative program areas that pair technical depth with the ability to work creatively, critically and collaboratively.
+      </p>
+     </div>
+     <div class="courses">
+      <article class="course">
+       <div class="course-top">
+        <span>
+         NX / 01
+        </span>
+        <span>
+         COMPUTE
+        </span>
+       </div>
+       <div class="course-icon">
+        ⌘
+       </div>
+       <h3>
+        Computer Science &amp; Engineering
+       </h3>
+       <p>
+        Programming, algorithms, software design and the systems that power digital experiences.
+       </p>
+       <a data-course="Computer Science &amp; Engineering" href="#admissions">
+        Explore pathway &nearrow;
+       </a>
+      </article>
+      <article class="course">
+       <div class="course-top">
+        <span>
+         NX / 02
+        </span>
+        <span>
+         INTELLIGENCE
+        </span>
+       </div>
+       <div class="course-icon">
+        ✳
+       </div>
+       <h3>
+        AI &amp; Machine Learning
+       </h3>
+       <p>
+        Explore data-driven models, intelligent tools and the responsible use of AI systems.
+       </p>
+       <a data-course="AI &amp; Machine Learning" href="#admissions">
+        Explore pathway &nearrow;
+       </a>
+      </article>
+      <article class="course">
+       <div class="course-top">
+        <span>
+         NX / 03
+        </span>
+        <span>
+         INSIGHT
+        </span>
+       </div>
+       <div class="course-icon">
+        ◈
+       </div>
+       <h3>
+        Data Science &amp; Analytics
+       </h3>
+       <p>
+        Use statistical thinking and visualisation to turn raw information into clear insight.
+       </p>
+       <a data-course="Data Science &amp; Analytics" href="#admissions">
+        Explore pathway &nearrow;
+       </a>
+      </article>
+      <article class="course">
+       <div class="course-top">
+        <span>
+         NX / 04
+        </span>
+        <span>
+         TRUST
+        </span>
+       </div>
+       <div class="course-icon">
+        ⛨
+       </div>
+       <h3>
+        Cybersecurity
+       </h3>
+       <p>
+        Study secure architectures, digital privacy and approaches to resilient systems.
+       </p>
+       <a data-course="Cybersecurity" href="#admissions">
+        Explore pathway &nearrow;
+       </a>
+      </article>
+      <article class="course">
+       <div class="course-top">
+        <span>
+         NX / 05
+        </span>
+        <span>
+         ENGINEER
+        </span>
+       </div>
+       <div class="course-icon">
+        ⌁
+       </div>
+       <h3>
+        Cloud &amp; Software Systems
+       </h3>
+       <p>
+        Understand distributed services, deployment, reliability and modern infrastructure.
+       </p>
+       <a data-course="Cloud &amp; Software Systems" href="#admissions">
+        Explore pathway &nearrow;
+       </a>
+      </article>
+      <article class="course">
+       <div class="course-top">
+        <span>
+         NX / 06
+        </span>
+        <span>
+         CREATE
+        </span>
+       </div>
+       <div class="course-icon">
+        ✦
+       </div>
+       <h3>
+        Product &amp; Interaction Design
+       </h3>
+       <p>
+        Connect user research, interface craft and prototyping to solve real problems.
+       </p>
+       <a data-course="Product &amp; Interaction Design" href="#admissions">
+        Explore pathway &nearrow;
+       </a>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section dark" id="research">
+    <div class="wrap">
+     <div class="section-head">
+      <div>
+       <span class="eyebrow" style="color:var(--cyan)">
+        02 / Research culture
+       </span>
+       <h2>
+        Question the possible.
+       </h2>
+      </div>
+      <p>
+       Innovation starts when curiosity meets method. Explore the themes that shape a future-aware technical education.
+      </p>
+     </div>
+     <div class="research-grid">
+      <article class="research-card">
+       <span>
+        RESEARCH THEME / 001
+       </span>
+       <h3>
+        Intelligence that serves people
+       </h3>
+       <p>
+        Investigate explainable AI, human-computer collaboration and the design choices that make intelligent systems more useful and accountable.
+       </p>
+       <a href="#admissions">
+        Ask about this theme &rarr;
+       </a>
+      </article>
+      <article class="research-card">
+       <span>
+        RESEARCH THEME / 002
+       </span>
+       <h3>
+        Resilient digital worlds
+       </h3>
+       <p>
+        Explore privacy, security, data infrastructure and the engineering practices that help digital services earn trust.
+       </p>
+       <a href="#admissions">
+        Ask about this theme &rarr;
+       </a>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="experience">
+    <div class="wrap experience">
+     <div class="experience-art">
+      <div class="orbit">
+      </div>
+      <div class="orbit-center">
+       N✳
+      </div>
+     </div>
+     <div>
+      <span class="eyebrow">
+       03 / The Nexora experience
+      </span>
+      <h2>
+       Learn by doing.
+       <br/>
+       Grow by sharing.
+      </h2>
+      <p style="color:var(--muted)">
+       A strong technology education is shaped by the work around the classroom: peer critique, experiments, thoughtful mentorship and the confidence to revisit a first attempt.
+      </p>
+      <div class="feature-list">
+       <div class="feature">
+        <span class="check">
+         &checkmark;
+        </span>
+        <span>
+         <strong>
+          Project-led practice
+         </strong>
+         <small>
+          Turn theory into prototypes and documented work.
+         </small>
+        </span>
+       </div>
+       <div class="feature">
+        <span class="check">
+         &checkmark;
+        </span>
+        <span>
+         <strong>
+          Collaborative studios
+         </strong>
+         <small>
+          Learn to communicate and build with others.
+         </small>
+        </span>
+       </div>
+       <div class="feature">
+        <span class="check">
+         &checkmark;
+        </span>
+        <span>
+         <strong>
+          Responsible innovation
+         </strong>
+         <small>
+          Consider the people and communities affected by technology.
+         </small>
+        </span>
+       </div>
+      </div>
+      <a class="btn" href="#admissions">
+       Start a conversation &rarr;
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="section apply" id="admissions">
+    <div class="wrap apply-card">
+     <div>
+      <span class="eyebrow">
+       04 / Admissions desk
+      </span>
+      <h2>
+       Start with a question.
+      </h2>
+      <p>
+       Tell us which learning area interests you. This demo form prepares a local enquiry summary only; it does not submit an application or send your details.
+      </p>
+      <p style="font-size:13px">
+       Nexora is a concept institute website. Course availability, fees and eligibility should be confirmed with the actual institution.
+      </p>
+     </div>
+     <form id="admissionForm">
+      <div class="form-grid">
+       <div class="field">
+        <label for="name">
+         Full name
+        </label>
+        <input id="name" minlength="2" placeholder="Your name" required=""/>
+       </div>
+       <div class="field">
+        <label for="email">
+         Email address
+        </label>
+        <input id="email" placeholder="you@example.com" required="" type="email"/>
+       </div>
+       <div class="field">
+        <label for="course">
+         Program interest
+        </label>
+        <select id="course" required="">
+         <option value="">
+          Select program
+         </option>
+         <option>
+          Computer Science &amp; Engineering
+         </option>
+         <option>
+          AI &amp; Machine Learning
+         </option>
+         <option>
+          Data Science &amp; Analytics
+         </option>
+         <option>
+          Cybersecurity
+         </option>
+         <option>
+          Cloud &amp; Software Systems
+         </option>
+         <option>
+          Product &amp; Interaction Design
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="level">
+         Current stage
+        </label>
+        <select id="level" required="">
+         <option value="">
+          Choose one
+         </option>
+         <option>
+          School student
+         </option>
+         <option>
+          Undergraduate applicant
+         </option>
+         <option>
+          Graduate applicant
+         </option>
+         <option>
+          Working professional
+         </option>
+         <option>
+          Just exploring
+         </option>
+        </select>
+       </div>
+       <div class="field full">
+        <label for="note">
+         Your question (optional)
+        </label>
+        <textarea id="note" maxlength="300" placeholder="What would you like to know?" rows="3"></textarea>
+       </div>
+       <div class="field full">
+        <button class="btn" type="submit">
+         Prepare enquiry summary &nearrow;
+        </button>
+        <div aria-live="polite" class="message" id="message" role="status">
+        </div>
+       </div>
+      </div>
+     </form>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="wrap">
+    <div class="footer-grid">
+     <div>
+      <h3>
+       NEXORA / Institute of Technology
+      </h3>
+      <p>
+       Ideas into impact.
+       <br/>
+       A concept website for a future-facing technology institute.
+      </p>
+     </div>
+     <div>
+      <h3>
+       Discover
+      </h3>
+      <a href="#courses">
+       Academic pathways
+      </a>
+      <a href="#research">
+       Research culture
+      </a>
+      <a href="#experience">
+       Student experience
+      </a>
+     </div>
+     <div>
+      <h3>
+       Take the next step
+      </h3>
+      <a href="#admissions">
+       Admissions enquiry
+      </a>
+      <a href="#home">
+       Back to top &uarr;
+      </a>
+     </div>
+    </div>
+    <div class="bottom">
+     &copy; Nexora concept redesign &middot; This demo does not represent an official admissions portal.
+    </div>
+   </div>
+   <div class="creator-credit">
+    Created by LOKESH
+   </div>
+  </footer>
+  <script>
+   const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open))});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+  document.querySelectorAll('[data-course]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('course').value=a.dataset.course}));
+  document.getElementById('admissionForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim(),course=document.getElementById('course').value,level=document.getElementById('level').value;document.getElementById('message').textContent='Enquiry summary prepared for '+name+' · '+course+' · '+level+'. Contact: '+email+'. Nothing has been sent.';});
+  </script>
+ </body>
+</html>
+
